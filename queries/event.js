@@ -13,7 +13,7 @@ module.exports = {
         }
     },
     resolve: (root, args) => {
-        return new Promise((rsv, re) => {
+        return new Promise((rsv, rej) => {
             rsv({
                 id: 'jhcjmhgchhhhm',
                 name: 'Launch Party',
