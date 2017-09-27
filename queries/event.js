@@ -15,9 +15,9 @@ module.exports = {
     resolve: (root, args) => {
         return new Promise((rsv, re) => {
             rsv({
-                id:'jhcjmhgchhhhm',
+                id: 'jhcjmhgchhhhm',
                 name: 'Launch Party',
-                date:'today'
+                date: 'today'
             })
         })
     }

@@ -11,11 +11,10 @@ app.use(
         schema,
         graphiql: dev,
         pretty: dev
-
     }))
 )
 
-app.listen(PORT, err=>{
-    if(err) throw err
+app.listen(PORT, err => {
+    if (err) throw err
     console.log(`Server started on PORT: ${PORT}`)
 })
