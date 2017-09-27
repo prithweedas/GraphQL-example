@@ -7,7 +7,8 @@ module.exports = new GraphQLInputObjectType({
             type:GraphQLString
         },
         date:{
-            type:GraphQLString
+            type:GraphQLString,
+            defaultValue: new Date().toISOString()
         }
     }
 })
