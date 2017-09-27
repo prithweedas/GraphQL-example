@@ -3,6 +3,8 @@ const {
     GraphQLNonNull
 } = require('graphql')
 const EventType = require('../types/event')
+const Event = require("../db/event")
+const getProjection = require('../utils/projection')
 
 module.exports = {
     type: EventType,
@@ -12,13 +14,15 @@ module.exports = {
             type: new GraphQLNonNull(GraphQLID)
         }
     },
-    resolve: (root, args) => {
+    resolve: (root, args, _, fieldASTs) => {
         return new Promise((rsv, rej) => {
-            rsv({
-                id: 'jhcjmhgchhhhm',
-                name: 'Launch Party',
-                date: 'today'
-            })
+            const projection = getProjection(fieldASTs)
+
+            Event.findById(args.id)
+                .select(projection)
+                .exec()
+                .then(data => rsv(data))
+                .catch(err => rej(err))
         })
     }
 }
