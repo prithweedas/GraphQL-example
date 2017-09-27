@@ -1,2 +1,4 @@
 # GraphQL-example
-trying out GraphQL for the first time
+This is a simple example of how to setup an GraphQL api with Express.
+### Start the server
+**node app** *then open* **localhost:3000/graphql** in your browser to start testing your GraphQL api
