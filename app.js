@@ -18,5 +18,6 @@ app.use(
 
 app.listen(PORT, err => {
     if (err) throw err
-    console.log(`Server started on PORT: ${PORT}`)
+    console.log(`Server started on PORT: ${PORT}
+Open localhost:3000/graphql in your browser`)
 })
